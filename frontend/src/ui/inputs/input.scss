@@ -1,0 +1,27 @@
+.ui-input {
+  position: relative;
+  width: 100%;
+
+  input {
+    width: 100%;
+    padding: 12px 12px 12px 40px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    box-sizing: border-box;
+  }
+}
+
+.ui-input-icon {
+  position: absolute;
+  top: 14px;
+  left: 12px;
+  color: #777;
+}
+
+.ui-input-error {
+  color: #ff6b6b;
+  font-size: 12px;
+  margin-top: 6px;
+}

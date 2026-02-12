@@ -1,0 +1,40 @@
+/* mainPage.scss */
+
+.main-page {
+  min-height: 90vh;
+  background: var(--color-bg);
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  margin: 0;
+
+  .auth-container {
+    width: 100%;
+    max-width: 400px;
+    background: var(--color-bg-light);
+    border-radius: 12px;
+    //padding: 24px; // visada vidinis tarpas
+    box-shadow: none;
+    transition: all 0.3s ease;
+  }
+}
+
+/* Tablet ir didesni ekranai */
+@media (min-width: 768px) {
+  .main-page {
+    padding: 32px;
+  }
+}
+
+/* Desktop ir didesni ekranai */
+@media (min-width: 1024px) {
+  .main-page {
+    background: linear-gradient(135deg, var(--color-bg), var(--color-bg-light));
+
+    .auth-container {
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+    }
+  }
+}

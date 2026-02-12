@@ -1,0 +1,85 @@
+/* Bendras sidebar */
+.sidebar {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 0; /* be apvalinimo */
+
+  /* Vizualus kontūro efektas tik dešinėje */
+  border-right: 1px solid rgba(0, 0, 0, 0.1); /* dark/light tema reguliuojama žemiau */
+  box-shadow: none; /* pašaliname visus box-shadow */
+}
+
+/* Tema: light vs dark */
+.sidebar.light {
+  background-color: var(--color-bg-light-theme);
+  color: var(--color-text-light-theme);
+  border-right: 1px solid rgba(0, 0, 0, 0.4); /* subtilus dešinės kraštinės kontūras */
+}
+
+.sidebar.dark {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  border-right: 1px solid rgba(255, 255, 255, 0.4); /* subtilus dešinės kraštinės kontūras */
+}
+
+/* Horizontalus nav po header (mobile-first) */
+.sidebar-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.5rem;
+  gap: 0.75rem;
+}
+
+.sidebar-nav a {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px; /* mažiau apvalinti link’ai */
+  color: inherit; /* paveldi nuo sidebar color */
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.sidebar-nav a:hover {
+  background-color: rgba(255, 255, 255, 0.05); /* subtilus hover efektas */
+}
+
+/* Tablet / desktop breakpoints */
+@media (min-width: 768px) {
+  .sidebar {
+    width: 260px;
+    height: calc(100vh - var(--header-height));
+    flex-shrink: 0;
+    padding: 1rem;
+  }
+
+  .sidebar-nav {
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 0.5rem;
+  }
+
+  .sidebar-nav a {
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width: 1024px) {
+  .sidebar {
+    width: 300px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .sidebar {
+    width: 320px;
+  }
+
+  .sidebar-nav a {
+    padding: 0.75rem 1rem;
+  }
+}
