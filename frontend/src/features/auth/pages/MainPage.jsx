@@ -11,14 +11,12 @@ const MainPage = () => {
     <>
       {!loggedIn ? (
         <div className="main-page">
-          <div className="auth-container">
             {isLoginForm ? (
               <LoginForm toggleForm={toggleForm} onSubmitCallback={handleLogin} />
             ) : (
               <RegisterForm toggleForm={toggleForm} />
             )}
           </div>
-        </div>
       ) : (
         <DashboardPage onLogout={handleLogout} />
       )}
