@@ -1,4 +1,3 @@
-/* Bendras sidebar */
 .sidebar {
   width: 100%;
   box-sizing: border-box;
@@ -47,7 +46,6 @@
   background-color: rgba(255, 255, 255, 0.05); /* subtilus hover efektas */
 }
 
-/* Tablet / desktop breakpoints */
 @media (min-width: 768px) {
   .sidebar {
     width: 260px;

@@ -28,7 +28,6 @@
   text-align: center;
 }
 
-/* Tablet view */
 @media (min-width: 768px) {
   .layout {
     flex-direction: row; // sidebar šone
@@ -39,14 +38,12 @@
   }
 }
 
-/* Desktop view */
 @media (min-width: 1024px) {
   .content {
     padding: 2rem;
   }
 }
 
-/* Large screens / TV */
 @media (min-width: 1440px) {
   .content {
     padding: 3rem;
