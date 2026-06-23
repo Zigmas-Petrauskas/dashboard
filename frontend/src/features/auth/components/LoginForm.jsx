@@ -3,7 +3,7 @@ import Input from "../../../ui/inputs/Input";
 import Button from "../../../ui/buttons/Button";
 import useLoginForm from "../hooks/useLoginForm";
 import AuthCard from "./AuthCard";
-import "./authForm.scss";
+import "./authCard.scss";
 
 const LoginForm = ({ toggleForm, onSubmitCallback }) => {
   const formik = useLoginForm(onSubmitCallback);
@@ -20,9 +20,8 @@ const LoginForm = ({ toggleForm, onSubmitCallback }) => {
         </p>
       }
     >
-
       <form className="auth-form" onSubmit={formik.handleSubmit}>
-        <Input 
+        <Input
           type="email"
           placeholder="El. paštas"
           icon={FaEnvelope}
@@ -41,7 +40,7 @@ const LoginForm = ({ toggleForm, onSubmitCallback }) => {
           Prisijungti
         </Button>
       </form>
-    </AuthCard>  
+    </AuthCard>
   );
 };
 

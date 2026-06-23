@@ -5,15 +5,9 @@ const AuthCard = ({ title, children, footer }) => {
     <div className="auth-card">
       <h2 className="auth-card-title">{title}</h2>
 
-      <div className="auth-card-body">
-        {children}
-      </div>
+      <div className="auth-card-body">{children}</div>
 
-      {footer && (
-        <div className="auth-card-footer">
-          {footer}
-        </div>
-      )}
+      {footer && <div className="auth-card-footer">{footer}</div>}
     </div>
   );
 };

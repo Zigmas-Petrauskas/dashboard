@@ -3,6 +3,7 @@ import Input from "../../../ui/inputs/Input";
 import Button from "../../../ui/buttons/Button";
 import useRegisterForm from "../hooks/useRegisterForm";
 import AuthCard from "./AuthCard";
+import "./authCard.scss";
 
 const RegisterForm = ({ toggleForm }) => {
   const formik = useRegisterForm();
